@@ -1,0 +1,68 @@
+body {
+  background: linear-gradient(
+    120deg,
+    #0f172a 0%,   /* light black / charcoal */
+    #111827 40%,
+    #1f2933 100%
+  );
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+
+.bg-blobs span {
+  position: fixed;
+  width: 420px;
+  height: 420px;
+  filter: blur(140px);
+  opacity: 0.35;
+  animation: float 25s infinite alternate;
+  z-index: -1;
+}
+
+.bg-blobs .white {
+  background: radial-gradient(circle, #ffffff, #e5e7eb);
+  top: -120px;
+  left: -120px;
+}
+
+.bg-blobs .grey {
+  background: radial-gradient(circle, #d1d5db, #9ca3af);
+  bottom: -150px;
+  right: -120px;
+  animation-delay: 8s;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-90px); }
+}
+
+/* Default text on cards & content */
+p, span, li, small {
+  color: #0f172a;   /* elegant deep black */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  color: #020617;   /* rich black */
+  font-weight: 600;
+}
+
+
+.btn-outline-dark {
+  border-color: #111827;
+  color: #111827;
+}
+
+.btn-outline-dark:hover {
+  background: #111827;
+  color: #ffffff;
+}
+ 
