@@ -590,3 +590,92 @@
     padding: 3px 8px;
   }
 }
+
+/* ========== MOBILE RESPONSIVE MODAL FIX ========== */
+
+@media (max-width: 768px) {
+  .modal-root {
+    padding: 0 !important;
+    align-items: flex-start !important;
+  }
+
+  .modal-dialog {
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: 100vh !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    inset: 0 !important;
+    display: block !important;
+  }
+
+  .modal-content {
+    border-radius: 0 !important;
+    max-height: 100vh !important;
+    height: 100vh !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px 16px !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 !important;
+  }
+
+  .dashboard-modal {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .dash-title {
+    font-size: 20px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .dash-grid {
+    padding: 12px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .dash-row {
+    grid-template-columns: 1fr !important;
+    gap: 8px;
+    padding: 10px 0;
+  }
+
+  .pill {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .project-overview {
+    padding: 12px !important;
+    margin-bottom: 16px !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .section-title {
+    font-size: 15px !important;
+    margin-top: 16px !important;
+  }
+
+  .section-text {
+    font-size: 13px !important;
+    line-height: 1.6;
+  }
+
+  .screens-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+
+  .modal-footer {
+    flex-direction: column !important;
+    gap: 10px;
+  }
+
+  .modal-footer .btn {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 12px 20px;
+  }
+}
