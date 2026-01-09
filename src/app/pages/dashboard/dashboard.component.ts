@@ -61,10 +61,66 @@ export class DashboardComponent implements OnInit {
           'Used AI developer tools (Aider, Claude Code) to accelerate development while maintaining code ownership'
         ],
         impact: 'Created a production-ready SaaS platform demonstrating expertise in enterprise security patterns, AI integration, and cloud deployment. Successfully deployed to both Render and Azure App Service.',
-        githubUrl: 'https://github.com/yourusername/ai-task-management',
-        docUrl: '#',
+        githubUrl: 'https://github.com/ahamedaslam/TaskManagerMultitenant',
+        docUrl: 'https://azure-vinita-34.tiiny.site/',
         screenshots: []
       },
+      {
+  id: 'ai-multi-agent-platform',
+  title: 'AI Multi-Agent Enterprise Automation Platform',
+  status: 'Personal Research Project',
+  description: 'Multi-agent AI system that automates complex business workflows using coordinated AI agents',
+  details: 'Designed and built a modular multi-agent AI platform where specialized autonomous agents collaborate to analyze requirements, plan workflows, execute tasks, and validate outputs. The system simulates enterprise workflow automation by enabling multiple AI agents to communicate, delegate responsibilities, and deliver structured business outputs.',
+  tech: [ 'Python', 'Google API','ADK','LangChain', 'Supabase','AI/ML' ],
+  role: 'System Architect & Full Stack Developer',
+  keyFeatures: [
+    'Coordinator agent to orchestrate and route tasks between multiple AI agents',
+    'Planner agent to analyze requirements and break down workflows into executable steps',
+    'Executor agents to perform data processing, document generation, and business logic tasks',
+    'Validator agent to review and verify agent outputs for accuracy and compliance',
+    'Context-aware memory store for maintaining conversation and task history',
+    'Tenant-aware agent isolation for secure enterprise use cases',
+    'Role-based access control and secure API authentication',
+    'Modular architecture allowing dynamic addition of new agents'
+  ],
+  challenges: [
+    'Designed inter-agent communication protocols to prevent hallucinations and task conflicts',
+    'Built prompt pipelines to maintain structured responses across multi-step workflows',
+    'Optimized execution chains to reduce response latency and API token consumption',
+    'Ensured data isolation and access boundaries between tenants'
+  ],
+  impact: 'Demonstrated real-world application of multi-agent AI for enterprise automation, showcasing expertise in AI orchestration, distributed system design, and secure cloud deployment.',
+  githubUrl: 'https://github.com/ahamedaslam/Adk_Shopping_Agent',
+  screenshots: []
+},
+{
+  id: 'ai-finance-assistant',
+  title: 'AI-Powered Finance Assistance & Analysis Agent',
+  status: 'Personal FinTech Project',
+  description: 'AI finance assistant that provides intelligent analysis, expense tracking, and financial insights through natural language interaction',
+  details: 'Designed and developed an intelligent finance assistant agent that helps users manage personal and small business finances by analyzing transactions, categorizing expenses, forecasting trends, and generating financial insights through conversational AI.',
+  tech: ['Python', 'Google API','ADK','LangChain', 'Supabase','AI/ML'],
+  role: 'Full Stack Developer & AI Architect',
+  keyFeatures: [
+    'Natural language interaction for querying financial data',
+    'Automated expense categorization and smart tagging',
+    'Monthly and yearly financial summary generation',
+    'Cash-flow trend analysis and forecasting',
+    'Anomaly detection for unusual spending behavior',
+    'Secure authentication with role-based access control',
+    'Encrypted storage of financial records',
+    'Modular agent architecture for analytics and reporting'
+  ],
+  challenges: [
+    'Designed prompt pipelines to produce structured financial summaries',
+    'Handled sensitive data with encryption and strict access controls',
+    'Optimized AI token usage for large financial datasets',
+    'Built rule-based validation layers to prevent incorrect financial advice'
+  ],
+  impact: 'Demonstrates applied AI in FinTech domain with strong focus on data privacy, financial analytics, and secure cloud-based AI deployments.',
+  githubUrl: 'https://github.com/yourusername/ai-finance-assistant',
+  screenshots: []
+},
       {
         id: 'school-management',
         title: 'School Management System',
@@ -82,7 +138,7 @@ export class DashboardComponent implements OnInit {
           'Entity Framework Core for efficient data management'
         ],
         impact: 'Demonstrated proficiency in modern .NET stack including Blazor WebAssembly and clean API design patterns.',
-        githubUrl: 'https://github.com/yourusername/school-management',
+        githubUrl: 'https://github.com/ahamedaslam/Pschool-BACKEND',
         screenshots: []
       },
       {
@@ -101,7 +157,7 @@ export class DashboardComponent implements OnInit {
           'High-quality output ensuring professional and engaging communication'
         ],
         impact: 'Successfully implemented AI model integration and demonstrated expertise in modern AI/ML technologies and backend development.',
-        githubUrl: 'https://github.com/yourusername/gen-ai-email',
+        githubUrl: 'https://github.com/ahamedaslam/Gen-AI-Project-Using-Llama3.1-AI-Project',
         screenshots: []
       },
 
@@ -114,7 +170,7 @@ export class DashboardComponent implements OnInit {
         details: 'Contributed to a major financial application modernization initiative for an internal banking system used for transaction reconciliation and regulatory reporting. The project involved migrating legacy systems to a modern architecture with improved performance, user experience, and long-term maintainability.',
         tech: ['Angular', '.NET Core', 'SQL Server', 'Microservices', 'REST APIs', 'SDLC', 'OOP'],
         role: 'Full Stack Developer',
-        duration: 'Part of current engagement',
+        duration: 'Part of Etisalat engagement',
         keyFeatures: [
           'Legacy system migration to modern Angular and .NET Core stack',
           'Microservices architecture for better scalability and maintenance',
@@ -130,7 +186,7 @@ export class DashboardComponent implements OnInit {
           'Implemented comprehensive testing to ensure regulatory compliance'
         ],
         impact: 'Successfully modernized critical banking infrastructure, improving system performance and user experience while maintaining strict regulatory compliance.',
-        screenshots: ['assets/projects/proc 1.jpeg', 'assets/projects/proc 2.jpeg', 'assets/projects/proc 3.jpeg']
+        // screenshots: ['assets/projects/proc 1.jpeg', 'assets/projects/proc 2.jpeg', 'assets/projects/proc 3.jpeg']
       },
       {
         id: 'aani-portal',
