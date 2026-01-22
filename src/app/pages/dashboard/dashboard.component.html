@@ -169,7 +169,7 @@ Specialized in telecom and financial systems.
 <section class="projects-section mt-5">
   <div class="profile-card">
 
-    <h2 class="fancy-title">Featured Projects</h2>
+    <h2 class="fancy-title">View My Work</h2>
 
     <div class="row justify-content-center mt-4" *ngIf="projects.length">
       <div class="col-md-4 mb-4" *ngFor="let p of projects">
@@ -249,11 +249,20 @@ Specialized in telecom and financial systems.
           <li *ngFor="let feature of selectedProject.keyFeatures">{{feature}}</li>
         </ul>
 
+
+
         <h5 class="section-title" *ngIf="selectedProject.challenges">Challenges & Solutions</h5>
         <ul class="section-text" *ngIf="selectedProject.challenges">
           <li *ngFor="let challenge of selectedProject.challenges">{{challenge}}</li>
         </ul>
-
+<div *ngIf="selectedProject.technicalHighlights && selectedProject.technicalHighlights.length > 0" class="project-section">
+  <h5>Technical Highlights</h5>
+  <ul>
+    <li *ngFor="let highlight of selectedProject.technicalHighlights">
+      {{ highlight }}
+    </li>
+  </ul>
+</div>
         <h5 class="section-title">Impact</h5>
         <p class="section-text">{{selectedProject.impact}}</p>
       </div>
