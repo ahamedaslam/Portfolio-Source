@@ -56,23 +56,34 @@ export class DashboardComponent implements OnInit {
     'Structured logging with correlation IDs for request tracing across services',
     'Clean architecture: Controllers → Services → Repositories with dependency injection'
   ],
+challenges: [
+  'Implemented EF Core global query filters to enforce tenant isolation at ORM level, eliminating manual tenant checks across the application',
+  'Designed secure authentication workflow combining Email Verification, JWT Authentication, Refresh Tokens, and Email-based 2FA',
+  'Implemented Ocelot API Gateway and secured downstream services using JWT token validation',
+  'Handled OTP lifecycle management including hashing, expiration, account activation, and login verification flows',
+  'Designed AI prompt strategy combining user tasks with conversation history while sanitizing sensitive tenant metadata',
+  'Created composite indexes (TenantId, Status, CreatedDate) to optimize multi-tenant query performance',
+  'Built tenant resolution middleware to extract and validate tenant context from JWT claims before request processing',
+  'Implemented refresh token storage and validation using Redis to support secure token rotation and revocation',
+  'Established centralized logging and request correlation across authentication and business services'
+],
   
-  challenges: [
-    'Implemented EF Core global query filters to enforce tenant isolation at ORM level, eliminating manual tenant checks in 100+ queries',
-    'Designed AI prompt strategy combining user tasks with conversation history while sanitizing sensitive tenant metadata',
-    'Created composite indexes (TenantId, Status, CreatedDate) reducing multi-tenant query latency by 65%',
-    'Built tenant resolution middleware to extract and validate tenant context from JWT claims before request processing'
-  ],
+technicalHighlights: [
+  'Implemented dedicated Authentication Microservice separated from business services',
+  'Implemented Ocelot API Gateway with Upstream and Downstream routing',
+  'Configured JWT Authentication with Access Tokens and Refresh Token rotation',
+  'Implemented Email-based Account Activation using OTP verification',
+  'Implemented Email OTP-based Two-Factor Authentication (2FA) during login',
+  'Integrated Redis for refresh token storage, validation, and revocation',
+  'Implemented ASP.NET Core Identity for user, role, and permission management',
+  'Integrated MailKit SMTP service for OTP delivery and account activation workflows',
+  'Implemented FluentValidation for request validation and input sanitization',
+  'Applied clean architecture principles with Controllers → Services → Repositories pattern',
+  'Implemented centralized logging with correlation IDs for request tracing',
+  'Implemented secure OTP hashing and UTC-based expiration handling'
+],
   
-  technicalHighlights: [
-    'Database-per-tenant alternative considered; chose shared DB with tenant scoping for cost efficiency',
-    'Middleware pipeline: Authentication → Tenant Resolution → Authorization',
-    'Integration tests with separate test databases per tenant to verify isolation',
-    'Swagger UI with tenant context examples for API documentation',
-    'CI/CD pipeline with automated deployment to Azure App Service'
-  ],
-  
-  impact: 'Deployed production SaaS platform handling 50+ tenants with complete data privacy. AI chatbot processes 500+ natural language queries daily with <2s response time. Demonstrates enterprise security patterns, AI integration, and scalable multi-tenant architecture.',
+  impact: 'Designed and implemented an enterprise-grade multi-tenant authentication system featuring ASP.NET Core Identity, JWT Authentication, Refresh Token Rotation, Redis Integration, Email-based Account Activation, Two-Factor Authentication (2FA), and Ocelot API Gateway. Demonstrates practical implementation of modern security patterns, microservices architecture, and scalable SaaS application design.',
   
   githubUrl: 'https://github.com/ahamedaslam/TaskManagerMultitenant',
   docUrl: 'https://azure-vinita-34.tiiny.site/',
