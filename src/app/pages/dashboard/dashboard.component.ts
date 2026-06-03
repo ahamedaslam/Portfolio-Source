@@ -168,6 +168,50 @@ technicalHighlights: [
       
 
       // Enterprise Projects
+
+
+      {
+  id: 'prochub',
+  title: 'ProcHub – Procurement Management Platform',
+  status: 'Enterprise',
+  description: 'End-to-end procurement platform automating vendor onboarding, purchase requisitions, RFQs, quotations, purchase orders, invoicing, and payment workflows.',
+  details: 'Developed and maintained multiple procurement modules supporting the complete Procure-to-Pay (P2P) lifecycle. Implemented vendor onboarding, approval workflows, RFQ management, quotation evaluation, purchase order generation, invoice processing, and system administration features with role-based access control.',
+  tech: ['Spring Boot', 'Angular', 'Oracle DB', 'Microservices', 'REST APIs', 'JWT', 'SMTP', 'OTP Authentication'],
+  role: 'Full Stack Developer',
+
+  keyFeatures: [
+    'Vendor onboarding with OTP-based authentication, profile management, bank account CRUD, and document verification',
+    'Admin configuration module for product categories, products, notification templates, email/SMS settings, and 2FA controls',
+    'Purchase Requisition (PR) workflow with configurable budget-tier approval process',
+    'RFQ creation, vendor invitation, quotation submission, and quotation lifecycle management',
+    'Vendor evaluation and comparison module supporting vendor selection and rejection workflows',
+    'Purchase Order generation from approved quotations with approval and acknowledgement tracking',
+    'Invoice management, Goods Receipt Note (GRN), payment verification, and financial closure processes',
+    'Comprehensive audit trail and workflow tracking across procurement lifecycle'
+  ],
+
+  challenges: [
+    'Implemented multi-stage approval workflows based on configurable budget tiers',
+    'Designed secure vendor onboarding with OTP verification and document validation',
+    'Built role-based procurement workflows involving Member, Manager, Procurement, Admin, and Vendor roles',
+    'Implemented RFQ-to-Quotation-to-PO lifecycle with strict business validation rules',
+    'Optimized Oracle database schema and APIs for procurement transaction processing'
+  ],
+
+  technicalHighlights: [
+    'Spring Boot Microservices Architecture',
+    'Angular-based responsive UI',
+    'Oracle Database with optimized relational design',
+    'RESTful API development and integration',
+    'JWT Authentication and OTP Verification',
+    'Email and SMS notification integration',
+    'Workflow Engine for PR approvals',
+    'Vendor Evaluation and Procurement Automation',
+    'Audit Logging and Activity Tracking'
+  ],
+
+  impact: 'Digitized the complete procurement lifecycle, reducing manual procurement operations through automated vendor onboarding, approval workflows, RFQ management, quotation evaluation, purchase order processing, and invoice tracking.'
+},
       {
         id: 'wrrs',
         title: 'Web Based Reporting Reconciliation System (WRRS)',
