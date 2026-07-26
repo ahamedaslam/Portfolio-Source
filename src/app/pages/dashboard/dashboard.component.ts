@@ -26,7 +26,7 @@ interface Project {
 })
 export class DashboardComponent implements OnInit {
 
-   projects: Project[] = [];
+  projects: Project[] = [];
   selectedProject: Project | null = null;
   previewImage: string | null = null;
 
@@ -37,114 +37,114 @@ export class DashboardComponent implements OnInit {
   loadProjects(): void {
     this.projects = [
       // Personal Projects
-   {
-  id: 'ai-task-management',
-  title: 'Multi-Tenant SaaS Platform with AI Assistant',
-  status: 'Production',
-  duration: '3 months',
-  description: 'Enterprise-grade SaaS platform enabling organizations to manage tasks with complete tenant isolation and AI-powered natural language interactions',
-  details: 'Production-ready multi-tenant application with strict data isolation, AI chatbot integration, and enterprise security patterns. Supports unlimited tenants with per-tenant data scoping enforced at the database level.',
-  tech: ['ASP.NET Core', 'Entity Framework Core', 'SQL Server', 'Claude AI API', 'JWT', 'OAuth2', 'Azure App Service', 'Docker'],
-  role: 'Backend Developer',
-  
-  keyFeatures: [
-    'Multi-tenant architecture with row-level security preventing cross-tenant data access',
-    'AI chatbot using Claude API with tenant-aware context for natural language task queries',
-    'JWT authentication with refresh token rotation and OAuth2 social login',
-    'Granular RBAC system (Admin/User roles) with permission-based feature access',
-    'Optimized EF Core queries with automatic tenant filtering and SQL Server indexing',
-    'Structured logging with correlation IDs for request tracing across services',
-    'Clean architecture: Controllers → Services → Repositories with dependency injection'
-  ],
-challenges: [
-  'Implemented EF Core global query filters to enforce tenant isolation at ORM level, eliminating manual tenant checks across the application',
-  'Designed secure authentication workflow combining Email Verification, JWT Authentication, Refresh Tokens, and Email-based 2FA',
-  'Implemented Ocelot API Gateway and secured downstream services using JWT token validation',
-  'Handled OTP lifecycle management including hashing, expiration, account activation, and login verification flows',
-  'Designed AI prompt strategy combining user tasks with conversation history while sanitizing sensitive tenant metadata',
-  'Created composite indexes (TenantId, Status, CreatedDate) to optimize multi-tenant query performance',
-  'Built tenant resolution middleware to extract and validate tenant context from JWT claims before request processing',
-  'Implemented refresh token storage and validation using Redis to support secure token rotation and revocation',
-  'Established centralized logging and request correlation across authentication and business services'
-],
-  
-technicalHighlights: [
-  'Implemented dedicated Authentication Microservice separated from business services',
-  'Implemented Ocelot API Gateway with Upstream and Downstream routing',
-  'Configured JWT Authentication with Access Tokens and Refresh Token rotation',
-  'Implemented Email-based Account Activation using OTP verification',
-  'Implemented Email OTP-based Two-Factor Authentication (2FA) during login',
-  'Integrated Redis for refresh token storage, validation, and revocation',
-  'Implemented ASP.NET Core Identity for user, role, and permission management',
-  'Integrated MailKit SMTP service for OTP delivery and account activation workflows',
-  'Implemented FluentValidation for request validation and input sanitization',
-  'Applied clean architecture principles with Controllers → Services → Repositories pattern',
-  'Implemented centralized logging with correlation IDs for request tracing',
-  'Implemented secure OTP hashing and UTC-based expiration handling'
-],
-  
-  impact: 'Designed and implemented an enterprise-grade multi-tenant authentication system featuring ASP.NET Core Identity, JWT Authentication, Refresh Token Rotation, Redis Integration, Email-based Account Activation, Two-Factor Authentication (2FA), and Ocelot API Gateway. Demonstrates practical implementation of modern security patterns, microservices architecture, and scalable SaaS application design.',
-  
-  githubUrl: 'https://github.com/ahamedaslam/TaskManagerMultitenant',
-  docUrl: 'https://azure-vinita-34.tiiny.site/',
-  screenshots: []
-},
       {
-  id: 'ai-multi-agent-platform',
-  title: 'AI Multi-Agent Enterprise Automation Platform',
-  status: 'Personal Research Project',
-  description: 'Multi-agent AI system that automates complex business workflows using coordinated AI agents',
-  details: 'Designed and built a modular multi-agent AI platform where specialized autonomous agents collaborate to analyze requirements, plan workflows, execute tasks, and validate outputs. The system simulates enterprise workflow automation by enabling multiple AI agents to communicate, delegate responsibilities, and deliver structured business outputs.',
-  tech: [ 'Python', 'Google API','ADK','LangChain', 'Supabase','AI/ML' ],
-  role: 'System Architect & Full Stack Developer',
-  keyFeatures: [
-    'Coordinator agent to orchestrate and route tasks between multiple AI agents',
-    'Planner agent to analyze requirements and break down workflows into executable steps',
-    'Executor agents to perform data processing, document generation, and business logic tasks',
-    'Validator agent to review and verify agent outputs for accuracy and compliance',
-    'Context-aware memory store for maintaining conversation and task history',
-    'Tenant-aware agent isolation for secure enterprise use cases',
-    'Role-based access control and secure API authentication',
-    'Modular architecture allowing dynamic addition of new agents'
-  ],
-  challenges: [
-    'Designed inter-agent communication protocols to prevent hallucinations and task conflicts',
-    'Built prompt pipelines to maintain structured responses across multi-step workflows',
-    'Optimized execution chains to reduce response latency and API token consumption',
-    'Ensured data isolation and access boundaries between tenants'
-  ],
-  impact: 'Demonstrated real-world application of multi-agent AI for enterprise automation, showcasing expertise in AI orchestration, distributed system design, and secure cloud deployment.',
-  githubUrl: 'https://github.com/ahamedaslam/Adk_Shopping_Agent',
-  screenshots: []
-},
-{
-  id: 'ai-finance-assistant',
-  title: 'AI-Powered Finance Assistance & Analysis Agent',
-  status: 'Personal FinTech Project',
-  description: 'AI finance assistant that provides intelligent analysis, expense tracking, and financial insights through natural language interaction',
-  details: 'Designed and developed an intelligent finance assistant agent that helps users manage personal and small business finances by analyzing transactions, categorizing expenses, forecasting trends, and generating financial insights through conversational AI.',
-  tech: ['Python', 'Google API','ADK','LangChain', 'Supabase','AI/ML'],
-  role: 'Full Stack Developer & AI Architect',
-  keyFeatures: [
-    'Natural language interaction for querying financial data',
-    'Automated expense categorization and smart tagging',
-    'Monthly and yearly financial summary generation',
-    'Cash-flow trend analysis and forecasting',
-    'Anomaly detection for unusual spending behavior',
-    'Secure authentication with role-based access control',
-    'Encrypted storage of financial records',
-    'Modular agent architecture for analytics and reporting'
-  ],
-  challenges: [
-    'Designed prompt pipelines to produce structured financial summaries',
-    'Handled sensitive data with encryption and strict access controls',
-    'Optimized AI token usage for large financial datasets',
-    'Built rule-based validation layers to prevent incorrect financial advice'
-  ],
-  impact: 'Demonstrates applied AI in FinTech domain with strong focus on data privacy, financial analytics, and secure cloud-based AI deployments.',
-  githubUrl: 'https://github.com/yourusername/ai-finance-assistant',
-  screenshots: []
-},
+        id: 'ai-task-management',
+        title: 'Multi-Tenant SaaS Platform with AI Assistant',
+        status: 'Production',
+        duration: 'On Progress',
+        description: 'Enterprise-grade SaaS platform enabling organizations to manage tasks with complete tenant isolation and AI-powered natural language interactions',
+        details: 'Production-ready multi-tenant application with strict data isolation, AI chatbot integration, and enterprise security patterns. Supports unlimited tenants with per-tenant data scoping enforced at the database level.',
+        tech: ['ASP.NET Core', 'Entity Framework Core', 'SQL Server', 'Claude AI API', 'JWT', 'OAuth2', 'Azure App Service', 'Docker'],
+        role: 'Backend Developer',
+
+        keyFeatures: [
+          'Multi-tenant architecture with row-level security preventing cross-tenant data access',
+          'AI chatbot using Claude API with tenant-aware context for natural language task queries',
+          'JWT authentication with refresh token rotation and OAuth2 social login',
+          'Granular RBAC system (Admin/User roles) with permission-based feature access',
+          'Optimized EF Core queries with automatic tenant filtering and SQL Server indexing',
+          'Structured logging with correlation IDs for request tracing across services',
+          'Clean architecture: Controllers → Services → Repositories with dependency injection'
+        ],
+        challenges: [
+          'Implemented EF Core global query filters to enforce tenant isolation at ORM level, eliminating manual tenant checks across the application',
+          'Designed secure authentication workflow combining Email Verification, JWT Authentication, Refresh Tokens, and Email-based 2FA',
+          'Implemented Ocelot API Gateway and secured downstream services using JWT token validation',
+          'Handled OTP lifecycle management including hashing, expiration, account activation, and login verification flows',
+          'Designed AI prompt strategy combining user tasks with conversation history while sanitizing sensitive tenant metadata',
+          'Created composite indexes (TenantId, Status, CreatedDate) to optimize multi-tenant query performance',
+          'Built tenant resolution middleware to extract and validate tenant context from JWT claims before request processing',
+          'Implemented refresh token storage and validation using Redis to support secure token rotation and revocation',
+          'Established centralized logging and request correlation across authentication and business services'
+        ],
+
+        technicalHighlights: [
+          'Implemented dedicated Authentication Microservice separated from business services',
+          'Implemented Ocelot API Gateway with Upstream and Downstream routing',
+          'Configured JWT Authentication with Access Tokens and Refresh Token rotation',
+          'Implemented Email-based Account Activation using OTP verification',
+          'Implemented Email OTP-based Two-Factor Authentication (2FA) during login',
+          'Integrated Redis for refresh token storage, validation, and revocation',
+          'Implemented ASP.NET Core Identity for user, role, and permission management',
+          'Integrated MailKit SMTP service for OTP delivery and account activation workflows',
+          'Implemented FluentValidation for request validation and input sanitization',
+          'Applied clean architecture principles with Controllers → Services → Repositories pattern',
+          'Implemented centralized logging with correlation IDs for request tracing',
+          'Implemented secure OTP hashing and UTC-based expiration handling'
+        ],
+
+        impact: 'Designed and implemented an enterprise-grade multi-tenant authentication system featuring ASP.NET Core Identity, JWT Authentication, Refresh Token Rotation, Redis Integration, Email-based Account Activation, Two-Factor Authentication (2FA), and Ocelot API Gateway. Demonstrates practical implementation of modern security patterns, microservices architecture, and scalable SaaS application design.',
+
+        githubUrl: 'https://github.com/ahamedaslam/TaskManagerMultitenant',
+        docUrl: 'https://azure-vinita-34.tiiny.site/',
+        screenshots: []
+      },
+      {
+        id: 'ai-multi-agent-platform',
+        title: 'AI Multi-Agent Enterprise Automation Platform',
+        status: 'Personal Research Project',
+        description: 'Multi-agent AI system that automates complex business workflows using coordinated AI agents',
+        details: 'Designed and built a modular multi-agent AI platform where specialized autonomous agents collaborate to analyze requirements, plan workflows, execute tasks, and validate outputs. The system simulates enterprise workflow automation by enabling multiple AI agents to communicate, delegate responsibilities, and deliver structured business outputs.',
+        tech: ['Python', 'Google API', 'ADK', 'LangChain', 'Supabase', 'AI/ML'],
+        role: 'System Architect & Full Stack Developer',
+        keyFeatures: [
+          'Coordinator agent to orchestrate and route tasks between multiple AI agents',
+          'Planner agent to analyze requirements and break down workflows into executable steps',
+          'Executor agents to perform data processing, document generation, and business logic tasks',
+          'Validator agent to review and verify agent outputs for accuracy and compliance',
+          'Context-aware memory store for maintaining conversation and task history',
+          'Tenant-aware agent isolation for secure enterprise use cases',
+          'Role-based access control and secure API authentication',
+          'Modular architecture allowing dynamic addition of new agents'
+        ],
+        challenges: [
+          'Designed inter-agent communication protocols to prevent hallucinations and task conflicts',
+          'Built prompt pipelines to maintain structured responses across multi-step workflows',
+          'Optimized execution chains to reduce response latency and API token consumption',
+          'Ensured data isolation and access boundaries between tenants'
+        ],
+        impact: 'Demonstrated real-world application of multi-agent AI for enterprise automation, showcasing expertise in AI orchestration, distributed system design, and secure cloud deployment.',
+        githubUrl: 'https://github.com/ahamedaslam/Adk_Shopping_Agent',
+        screenshots: []
+      },
+      {
+        id: 'ai-finance-assistant',
+        title: 'AI-Powered Finance Assistance & Analysis Agent',
+        status: 'Personal FinTech Project',
+        description: 'AI finance assistant that provides intelligent analysis, expense tracking, and financial insights through natural language interaction',
+        details: 'Designed and developed an intelligent finance assistant agent that helps users manage personal and small business finances by analyzing transactions, categorizing expenses, forecasting trends, and generating financial insights through conversational AI.',
+        tech: ['Python', 'Google API', 'ADK', 'LangChain', 'Supabase', 'AI/ML'],
+        role: 'Full Stack Developer & AI Architect',
+        keyFeatures: [
+          'Natural language interaction for querying financial data',
+          'Automated expense categorization and smart tagging',
+          'Monthly and yearly financial summary generation',
+          'Cash-flow trend analysis and forecasting',
+          'Anomaly detection for unusual spending behavior',
+          'Secure authentication with role-based access control',
+          'Encrypted storage of financial records',
+          'Modular agent architecture for analytics and reporting'
+        ],
+        challenges: [
+          'Designed prompt pipelines to produce structured financial summaries',
+          'Handled sensitive data with encryption and strict access controls',
+          'Optimized AI token usage for large financial datasets',
+          'Built rule-based validation layers to prevent incorrect financial advice'
+        ],
+        impact: 'Demonstrates applied AI in FinTech domain with strong focus on data privacy, financial analytics, and secure cloud-based AI deployments.',
+        githubUrl: 'https://github.com/yourusername/ai-finance-assistant',
+        screenshots: []
+      },
       {
         id: 'school-management',
         title: 'School Management System',
@@ -165,53 +165,53 @@ technicalHighlights: [
         githubUrl: 'https://github.com/ahamedaslam/Pschool-BACKEND',
         screenshots: []
       },
-      
+
 
       // Enterprise Projects
 
 
       {
-  id: 'prochub',
-  title: 'ProcHub – Procurement Management Platform',
-  status: 'Enterprise',
-  description: 'End-to-end procurement platform automating vendor onboarding, purchase requisitions, RFQs, quotations, purchase orders, invoicing, and payment workflows.',
-  details: 'Developed and maintained multiple procurement modules supporting the complete Procure-to-Pay (P2P) lifecycle. Implemented vendor onboarding, approval workflows, RFQ management, quotation evaluation, purchase order generation, invoice processing, and system administration features with role-based access control.',
-  tech: ['Spring Boot', 'Angular', 'Oracle DB', 'Microservices', 'REST APIs', 'JWT', 'SMTP', 'OTP Authentication'],
-  role: 'Full Stack Developer',
+        id: 'prochub',
+        title: 'ProcHub – Procurement Management Platform',
+        status: 'Enterprise',
+        description: 'End-to-end procurement platform automating vendor onboarding, purchase requisitions, RFQs, quotations, purchase orders, invoicing, and payment workflows.',
+        details: 'Developed and maintained multiple procurement modules supporting the complete Procure-to-Pay (P2P) lifecycle. Implemented vendor onboarding, approval workflows, RFQ management, quotation evaluation, purchase order generation, invoice processing, and system administration features with role-based access control.',
+        tech: ['Spring Boot', 'Angular', 'Oracle DB', 'Microservices', 'REST APIs', 'JWT', 'SMTP', 'OTP Authentication'],
+        role: 'Full Stack Developer',
 
-  keyFeatures: [
-    'Vendor onboarding with OTP-based authentication, profile management, bank account CRUD, and document verification',
-    'Admin configuration module for product categories, products, notification templates, email/SMS settings, and 2FA controls',
-    'Purchase Requisition (PR) workflow with configurable budget-tier approval process',
-    'RFQ creation, vendor invitation, quotation submission, and quotation lifecycle management',
-    'Vendor evaluation and comparison module supporting vendor selection and rejection workflows',
-    'Purchase Order generation from approved quotations with approval and acknowledgement tracking',
-    'Invoice management, Goods Receipt Note (GRN), payment verification, and financial closure processes',
-    'Comprehensive audit trail and workflow tracking across procurement lifecycle'
-  ],
+        keyFeatures: [
+          'Vendor onboarding with OTP-based authentication, profile management, bank account CRUD, and document verification',
+          'Admin configuration module for product categories, products, notification templates, email/SMS settings, and 2FA controls',
+          'Purchase Requisition (PR) workflow with configurable budget-tier approval process',
+          'RFQ creation, vendor invitation, quotation submission, and quotation lifecycle management',
+          'Vendor evaluation and comparison module supporting vendor selection and rejection workflows',
+          'Purchase Order generation from approved quotations with approval and acknowledgement tracking',
+          'Invoice management, Goods Receipt Note (GRN), payment verification, and financial closure processes',
+          'Comprehensive audit trail and workflow tracking across procurement lifecycle'
+        ],
 
-  challenges: [
-    'Implemented multi-stage approval workflows based on configurable budget tiers',
-    'Designed secure vendor onboarding with OTP verification and document validation',
-    'Built role-based procurement workflows involving Member, Manager, Procurement, Admin, and Vendor roles',
-    'Implemented RFQ-to-Quotation-to-PO lifecycle with strict business validation rules',
-    'Optimized Oracle database schema and APIs for procurement transaction processing'
-  ],
+        challenges: [
+          'Implemented multi-stage approval workflows based on configurable budget tiers',
+          'Designed secure vendor onboarding with OTP verification and document validation',
+          'Built role-based procurement workflows involving Member, Manager, Procurement, Admin, and Vendor roles',
+          'Implemented RFQ-to-Quotation-to-PO lifecycle with strict business validation rules',
+          'Optimized Oracle database schema and APIs for procurement transaction processing'
+        ],
 
-  technicalHighlights: [
-    'Spring Boot Microservices Architecture',
-    'Angular-based responsive UI',
-    'Oracle Database with optimized relational design',
-    'RESTful API development and integration',
-    'JWT Authentication and OTP Verification',
-    'Email and SMS notification integration',
-    'Workflow Engine for PR approvals',
-    'Vendor Evaluation and Procurement Automation',
-    'Audit Logging and Activity Tracking'
-  ],
+        technicalHighlights: [
+          'Spring Boot Microservices Architecture',
+          'Angular-based responsive UI',
+          'Oracle Database with optimized relational design',
+          'RESTful API development and integration',
+          'JWT Authentication and OTP Verification',
+          'Email and SMS notification integration',
+          'Workflow Engine for PR approvals',
+          'Vendor Evaluation and Procurement Automation',
+          'Audit Logging and Activity Tracking'
+        ],
 
-  impact: 'Digitized the complete procurement lifecycle, reducing manual procurement operations through automated vendor onboarding, approval workflows, RFQ management, quotation evaluation, purchase order processing, and invoice tracking.'
-},
+        impact: 'Digitized the complete procurement lifecycle, reducing manual procurement operations through automated vendor onboarding, approval workflows, RFQ management, quotation evaluation, purchase order processing, and invoice tracking.'
+      },
       {
         id: 'wrrs',
         title: 'Web Based Reporting Reconciliation System (WRRS)',

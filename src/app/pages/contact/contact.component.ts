@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -10,10 +11,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent {
 
   form: FormGroup;
-
   submitted = false;
+  sending = false;
+  error = false;
 
-  constructor(private fb: FormBuilder) {
+  // Formspree URL endpoint for email submissions
+  private formspreeUrl = 'https://formspree.io/f/mlgqoyeb';
+
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.form = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -23,9 +28,21 @@ export class ContactComponent {
 
   submit() {
     if (this.form.valid) {
-      console.log(this.form.value); // Hook to API later
-      this.submitted = true;
-      this.form.reset();
+      this.sending = true;
+      this.error = false;
+
+      this.http.post(this.formspreeUrl, this.form.value).subscribe({
+        next: (response) => {
+          this.sending = false;
+          this.submitted = true;
+          this.form.reset();
+        },
+        error: (err) => {
+          console.error('Formspree submission error:', err);
+          this.sending = false;
+          this.error = true;
+        }
+      });
     }
   }
 }

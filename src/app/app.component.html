@@ -3,6 +3,15 @@
   <span class="grey"></span>
 </div>
 
+<nav class="navbar-custom">
+  <a routerLink="/" class="navbar-brand">Ahamed Aslam</a>
+  <div class="navbar-links">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navbar-link">Home</a>
+    <a routerLink="/resume" routerLinkActive="active" class="navbar-link">Resume</a>
+    <a routerLink="/contact" routerLinkActive="active" class="navbar-link">Contact</a>
+  </div>
+</nav>
 
-
-<router-outlet></router-outlet>
+<div class="page-wrapper">
+  <router-outlet></router-outlet>
+</div>

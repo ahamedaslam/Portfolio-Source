@@ -1,7 +1,258 @@
-.skill {
-  background: #e2e8f0;
-  padding: 6px 12px;
-  border-radius: 20px;
-  margin: 5px;
-  display: inline-block;
+.resume-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resume-paper-card {
+  padding: 3.5rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--border-radius-lg);
+}
+
+.resume-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .resume-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.header-main h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.2rem;
+  background: linear-gradient(135deg, #ffffff 40%, var(--accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.role-title {
+  font-size: 1.25rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .contact-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.contact-item svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.contact-item a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+.contact-item a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.resume-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 2.5rem 0;
+}
+
+.resume-section {
+  margin-bottom: 2.5rem;
+}
+
+.resume-section:last-child {
+  margin-bottom: 0;
+}
+
+.resume-section-title {
+  font-size: 1.3rem;
+  font-family: var(--font-display);
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.resume-section-title::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.summary-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Skills Matrix */
+.skills-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.matrix-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+@media (min-width: 768px) {
+  .matrix-row {
+    grid-template-columns: 220px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+
+.matrix-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.matrix-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.matrix-value {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Experience & Jobs */
+.job-item, .edu-item {
+  margin-bottom: 2rem;
+}
+
+.job-item:last-child, .edu-item:last-child {
+  margin-bottom: 0;
+}
+
+.job-header, .edu-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.8rem;
+}
+
+@media (min-width: 576px) {
+  .job-header, .edu-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.job-title, .degree-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.job-company, .college-title {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  display: block;
+  margin-top: 0.15rem;
+}
+
+.job-duration, .edu-duration {
+  font-size: 0.85rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 3px 10px;
+  border-radius: 99px;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  align-self: flex-start;
+}
+
+.job-bullets {
+  list-style: none;
+  padding: 0;
+}
+
+.job-bullets li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.job-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.job-bullets li::before {
+  content: '▪';
+  position: absolute;
+  left: 0;
+  color: var(--accent-cyan);
+  font-size: 0.75rem;
+  top: 1px;
+}
+
+.edu-grade {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.edu-grade b {
+  color: var(--accent-cyan);
+}
+
+/* Responsive adjustment for padding */
+@media (max-width: 768px) {
+  .resume-paper-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .header-main h1 {
+    font-size: 2.2rem;
+  }
+  
+  .resume-divider {
+    margin: 1.8rem 0;
+  }
 }
